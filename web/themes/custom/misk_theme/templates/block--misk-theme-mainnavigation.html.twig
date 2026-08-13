@@ -1,0 +1,31 @@
+<button type="button"
+  class="btn p-0 border-0 position-relative z-3 d-flex align-items-center justify-content-center"
+  data-bs-toggle="offcanvas" data-bs-target="#mobileNav">
+  <img src="{{ directory }}/assets/Images/Subtract.png">
+  <img src="{{ directory }}/assets/Images/bibi.png" class="position-absolute">
+</button>
+
+<div class="offcanvas offcanvas-top offcanvas-head bg-primary ms-auto border-0 d-flex flex-column" tabindex="-1"
+  id="mobileNav" data-bs-scroll="true">
+
+  <div class="offcanvas-header">
+    <button type="button" class="btn border-0 position-absolute top-0 end-0" data-bs-dismiss="offcanvas">
+      <i class="bi bi-x-lg text-secondary fs-2"></i>
+    </button>
+  </div>
+
+  <div class="offcanvas-body mt-12 ms-4 px-5 pt-4 flex-grow-1">
+    <div class="accordion" id="burger-menu">
+      {{ content }}
+    </div>
+  </div>
+
+
+  <div class="px-4 pb-4 pt-5 mx-4 border-top border-secondary">
+    <div class="d-flex align-items-center bg-white rounded-1 px-3 py-2 mt-3 w-100">
+      <input type="text" class="border-0 flex-grow-1 bg-transparent" placeholder="Search" style="outline:none;">
+      <i class="bi bi-search"></i>
+    </div>
+  </div>
+
+</div>

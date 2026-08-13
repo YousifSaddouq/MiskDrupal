@@ -1,0 +1,10 @@
+name: Hero Slide
+props:
+  type: object
+  properties:
+    image:
+      title: Image URL
+      $ref: "json-schema-definitions://canvas.module/stream-wrapper-image-uri"
+    title:
+      type: string
+      title: Slide title

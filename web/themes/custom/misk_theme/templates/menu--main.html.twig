@@ -1,0 +1,33 @@
+{% import _self as menus %}
+{{menus.menu_links(items,0,'burger-menu') }}
+
+{% macro menu_links(items, depth, parent_id) %}
+  {% import _self as menus %}
+  {% for item in items %}
+    {% set item_id = parent_id ~ '-' ~ loop.index %}
+    {% set sub_id = item_id ~ '-sub' %}
+    <div class="accordion-item border-0 bg-transparent">
+      {% if item.below %}    
+        <div class="d-flex align-items-center justify-content-between nav-item-trigger">
+          <a href="{{ item.url }}" class="text-white text-decoration-none fw-bold {{ depth == 0 ? 'display-4' : '' }} flex-grow-1 {{ depth == 0 ? 'py-5' : 'py-3' }}">
+            {{ item.title }}
+          </a>
+          <button type="button" class="btn border-0 p-0 ps-2 collapsed" data-bs-toggle="collapse" data-bs-target="#{{ item_id }}" data-bs-parent="#{{ parent_id }}" aria-expanded="false" aria-label="Toggle submenu">
+            <i class="bi bi-caret-down-fill text-secondary fs-5"></i>
+          </button>
+        </div>
+        <div class="collapse accordion-collapse" id="{{ item_id }}" data-bs-parent="#{{ parent_id }}">
+          <div class="accordion" id="{{ sub_id }}">
+            {{ menus.menu_links(item.below, depth + 1, sub_id) }}
+          </div>
+        </div>
+      {% else %}
+        <a href="{{ item.url }}" class="text-white text-decoration-none {{ depth == 0 ? 'fw-bold display-4' : (depth == 1 ? 'fw-bold' : 'fs-6') }} d-block {{ depth == 0 ? 'py-5' : 'py-3' }}">
+          {{ item.title }}
+        </a>
+      {% endif %}
+    </div>  
+
+  {% endfor %}
+
+{% endmacro %}

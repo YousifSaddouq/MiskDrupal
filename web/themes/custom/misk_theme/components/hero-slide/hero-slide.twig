@@ -1,0 +1,14 @@
+<div class="slider position-relative">
+  <div class="slide-media">
+    {% if image %}
+      <img src="{{ file_url(image) }}" class="w-100 object-fit-cover">
+    {% endif %}
+  </div>
+  {% if title %}
+    <div class="slide-content position-absolute w-100">
+      <div class="container">
+        <h1 class="slide-title text-white">{{ title }}</h1>
+      </div>
+    </div>
+  {% endif %}
+</div>

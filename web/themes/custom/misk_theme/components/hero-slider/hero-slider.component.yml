@@ -1,0 +1,9 @@
+name: Hero Slider
+slots:
+  slides:
+    title: slides
+    description: Hero slide items
+libraryOverrides:
+  dependencies:
+    - misk_theme/slick
+    - core/once
