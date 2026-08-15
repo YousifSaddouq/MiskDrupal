@@ -1,0 +1,47 @@
+// "Leaders in the Making" presentation section
+
+.content-decoration {
+  background-image: url("../assets/Images/Group.svg");
+  background-repeat: repeat-y;
+  background-size: contain;
+  min-width: 2.55938rem;
+}
+
+.link-more {
+  width: fit-content;
+  height: fit-content;
+
+  a {
+    transition: transform 0.3s ease;
+  }
+
+  i {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    a {
+      transform: translateX(21px);
+      text-decoration: none;
+    }
+
+    i {
+      transform: translateX(-100px);
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .link-more {
+    &:hover {
+      a {
+        transform: translateX(21px);
+        text-decoration: none;
+      }
+
+      i {
+        transform: translateX(-100px);
+      }
+    }
+  }
+}

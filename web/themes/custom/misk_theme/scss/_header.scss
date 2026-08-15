@@ -1,0 +1,148 @@
+.hero-logo {
+  z-index: 1046;
+  width: 170px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.offcanvas-head {
+  max-width: 400px;
+  min-height: 700px;
+}
+
+.offcanvas {
+  #burger-menu {
+    > .accordion-item {
+      opacity: 0;
+      transform: translate3d(0, -40px, 0);
+      transition:
+        opacity 0.2s cubic-bezier(0.32, 0.08, 0.24, 1),
+        transform 0.5s cubic-bezier(0.32, 0.08, 0.24, 1);
+    }
+  }
+
+  &.show {
+    #burger-menu {
+      .accordion-item {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        transition-delay: 0s;
+      }
+    }
+  }
+}
+
+.offcanvas-top {
+  transition: transform 0s;
+}
+
+@media (max-width: 767.98px) {
+  body:has(.offcanvas.show) {
+    overflow: hidden;
+  }
+
+  header:has(.offcanvas.show) {
+    .hero-logo {
+      margin-right: 4.6rem !important;
+    }
+  }
+}
+
+.accordion:has(
+  > .accordion-item [data-bs-toggle="collapse"][aria-expanded="true"]
+) {
+  > .accordion-item {
+    > a,
+    > .nav-item-trigger {
+      opacity: 0.3;
+      transition: opacity 0s;
+      transition-delay: 0s;
+    }
+
+    &:has([data-bs-toggle="collapse"][aria-expanded="true"]) {
+      > a,
+      > .nav-item-trigger {
+        opacity: 1;
+        border-bottom: 2px solid #d9e378;
+        padding-bottom: 4px;
+      }
+    }
+  }
+}
+
+.offcanvas-body {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.accordion-item {
+  border-bottom: 2px solid transparent;
+
+  &:hover:not(
+    :has([data-bs-toggle="collapse"][aria-expanded="true"])
+  ) {
+    border-bottom: 2px solid white !important;
+
+    > a,
+    > .nav-item-trigger {
+      animation: flash 0.6s ease forwards;
+      font-weight: 700;
+    }
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+[data-bs-toggle="collapse"][aria-expanded="true"] {
+  .bi-caret-down-fill {
+    transform: rotate(180deg);
+  }
+}
+
+#mobileNav {
+  position: fixed !important;
+  z-index: 1045 !important;
+  visibility: hidden !important;
+  background-color: var(--bs-primary) !important;
+
+  &.show {
+    visibility: visible !important;
+  }
+
+  .offcanvas-header {
+    display: block !important;
+  }
+}
+
+#navbar-main {
+  min-height: 90px;
+  background-color: transparent !important;
+}
+
+.navbar-brand {
+  position: relative;
+  z-index: 1046 !important;
+}
+
+#burger-menu {
+  width: 100%;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}

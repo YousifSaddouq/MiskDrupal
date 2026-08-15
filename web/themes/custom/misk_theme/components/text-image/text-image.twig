@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="presentation row g-0 mb-12 mb-md-13">
+
+    <div class="presentation-media col-12 col-md-5">
+      {% if image %}
+        <img
+          src="{{ file_url(image) }}"
+          class="d-block w-100 h-100"
+          alt=""
+        >
+      {% endif %}
+    </div>
+
+    <div class="presentation-content col-12 col-md-7 bg-primary p-10 p-md-12 d-flex flex-column position-relative">
+
+      <div class="content-decoration position-absolute top-0 end-0 h-100"></div>
+
+      {% if title %}
+        <h2 class="content-header text-white fw-bold mb-10 w-75">
+          {{ title }}
+        </h2>
+      {% endif %}
+
+      {% if body %}
+        <div class="text-white mb-10 w-75 presentation-body">
+          {{ body|raw }}
+        </div>
+      {% endif %}
+
+      {% if link_url %}
+        <div class="presentation-link d-inline-flex link-more">
+          <a href="{{ link_url }}" class="text-white fw-bold">
+            {{ link_text|default('Learn More') }}
+          </a>
+
+          <i class="bi bi-caret-right-fill text-white"></i>
+        </div>
+      {% endif %}
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,26 @@
+.partners .partners-content {
+  max-width: 49.5rem;
+}
+.partners .partner-cell {
+  width: 25%;
+  height: 8rem;
+  border-radius: 12px;
+  transition: box-shadow 0.4s ease, background 0.4s ease, transform 0.4s ease;
+}
+.partners .partner-cell img {
+  max-width: 80%;
+  max-height: 80%;
+}
+.partners .partner-cell:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  background: white;
+  transform: scale(1.05);
+}
+@media (max-width: 767.98px) {
+  .partners .partners-content .partner-cell {
+    width: 50%;
+    height: 5rem;
+  }
+}
+
+/*# sourceMappingURL=partners.css.map */

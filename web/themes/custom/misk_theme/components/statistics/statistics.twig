@@ -1,0 +1,17 @@
+<div class="statistics-block container mb-12 mb-md-13 mx-sm-auto">
+  <div class="bg-primary rounded-4">
+
+    {% if heading %}
+      <div class="glance-header py-7">
+        <h2 class="glance-title text-white fw-bold text-center py-7">
+          {{ heading }}
+        </h2>
+      </div>
+    {% endif %}
+
+    <div class="glance-content row text-center pb-11">
+      {% block items %}{% endblock %}
+    </div>
+
+  </div>
+</div>

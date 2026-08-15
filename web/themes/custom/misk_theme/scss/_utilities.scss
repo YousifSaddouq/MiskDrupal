@@ -1,0 +1,7 @@
+// keep display sizes flat at every viewport (bypasses Bootstrap's RFS fluid scaling),
+// sourced straight from $display-font-sizes so there's no duplicated values
+@each $display, $font-size in $display-font-sizes {
+  .display-#{$display} {
+    font-size: $font-size;
+  }
+}

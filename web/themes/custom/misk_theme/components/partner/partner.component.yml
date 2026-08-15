@@ -1,0 +1,10 @@
+name: Partner
+props:
+  type: object
+  properties:
+    image:
+      title: Image URL
+      $ref: "json-schema-definitions://canvas.module/stream-wrapper-image-uri"
+    url:
+      type: string
+      title: Link URL

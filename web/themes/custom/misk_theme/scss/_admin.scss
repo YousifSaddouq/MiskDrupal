@@ -1,0 +1,20 @@
+.menu-tree {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu-tree .menu-tree {
+    padding-left: 2rem;
+    margin-top: 0.5rem;
+    min-height: 24px;
+}
+
+.menu-tree .menu-tree:empty {
+    border: 1px dashed #ccc;
+}
+
+.ck-content,
+.ck.ck-editor__editable_inline {
+  color: #212529 !important;
+}
+

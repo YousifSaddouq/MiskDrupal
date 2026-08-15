@@ -1,0 +1,22 @@
+name: Text and Image
+props:
+  type: object
+  properties:
+     image:
+       title: Image URL
+       $ref: "json-schema-definitions://canvas.module/stream-wrapper-image-uri"
+     title:
+       type: string
+       title: Title
+     body:
+       type: string
+       title: Body
+       contentMediaType: text/html
+       x-formatting-context: block
+     link_url:
+       type: string 
+       title: Link URL
+     link_text:
+       type: string
+       title: Link Text
+       default: Learn More       

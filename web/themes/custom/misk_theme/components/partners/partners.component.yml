@@ -1,0 +1,13 @@
+name: Partners
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Heading
+    button_text:
+      type: string
+      title: Button Text
+slots:
+  partners:
+    title: Partners    

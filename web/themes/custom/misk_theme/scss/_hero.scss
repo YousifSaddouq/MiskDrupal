@@ -1,0 +1,50 @@
+// hero slider
+
+.slide-title {
+  max-width: 762px;
+}
+
+.slide-content {
+  bottom: 100px;
+}
+
+.slider-nav {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.slide-media {
+  img {
+    height: 600px;
+    filter: brightness(70%);
+  }
+}
+
+.slider-nav-wrapper {
+  bottom: 50px;
+}
+
+.slider-nav {
+  li {
+    margin: 4px;
+  }
+}
+
+.slider-nav li .dot-arrow-icon {
+  display: block;
+  width: 18px;
+  height: 30px;
+  background-image: url("../assets/Images/Vector-1.svg");
+  background-repeat: no-repeat;
+}
+
+.slider-nav li.slick-active .dot-arrow-icon {
+  display: block;
+  width: 18px;
+  height: 30px;
+  background-image: url("../assets/Images/Vector.svg");
+  background-repeat: no-repeat;
+}
+.hero-slider { width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); }

@@ -1,0 +1,95 @@
+// admissions page
+
+.admissions-hero {
+  &:has(+ .admissions-image-section) {
+    padding-bottom: 14rem;
+  }
+
+  .admissions-title {
+    @include media-breakpoint-down(md) {
+      font-size: $h3-font-size;
+    }
+  }
+}
+
+.footer-admissions {
+  max-width: 55%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    width: 100vw;
+    background-color: inherit;
+  }
+
+  @include media-breakpoint-down(md) {
+    max-width: 100%;
+  }
+}
+
+.admissions-image-section {
+  .admissions-main-image {
+    width: 80%;
+    max-height: 55vh;
+  }
+
+  @include media-breakpoint-down(md) {
+    .admissions-main-image {
+      width: 100%;
+      max-height: 40vh;
+    }
+  }
+}
+
+.application {
+  .application-form {
+    textarea {
+      resize: none;
+    }
+  }
+}
+
+.fees-table {
+  table {
+    --bs-table-striped-bg: #{$light-hover};
+
+    th,
+    td {
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+}
+
+.news-node-article-body {
+  .dateline {
+    h3 {
+      font-size: 1.6875rem;
+    }
+  }
+}
+
+.page-body-content {
+  ul {
+    column-count: 2;
+    column-gap: 3rem;
+    padding-left: 1.25rem;
+
+    li {
+      break-inside: avoid;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    ul {
+      column-count: 1;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<div class="partners container mb-13">
+   {% if heading %}
+    <div class="partners-heading text-center mb-10">
+        <h2 class="text-dark">{{ heading }}</h2>
+    </div>
+   {% endif %}
+    
+
+    <div class="partners-content mx-auto d-flex flex-wrap justify-content-center align-items-center mb-0 mb-md-9">
+        {% block partners %} {% endblock %}
+    </div>
+   {% if button_text %}
+    <div class="partners-more text-center">
+        <button class="btn btn-primary rounded-pill px-7 py-3 fw-bold">
+            {{ button_text }}
+        </button>
+    </div>
+    {% endif %}
+</div>

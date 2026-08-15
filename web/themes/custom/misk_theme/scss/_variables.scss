@@ -1,0 +1,87 @@
+$font-size-base: 1.125rem;
+$headings-font-weight: 600;
+
+//Brand colors
+$font-base: "Codec Pro", sans-serif;
+$font-family-base: $font-base;
+$primary: #00372a;
+
+$secondary: #d9e378;
+$secondary-hover: #21b592;
+$light: #e4ecea;
+$light-hover: #dbeae6;
+$primary-yellow: #c2d500;
+
+// scss-docs-start theme-colors-map
+
+// Alert colors
+
+$success: #198754;
+$info: #0dcaf0;
+$warning: #ffcd39;
+$danger: #b02a37;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "primary-yellow": $primary-yellow,
+) !default;
+
+// TypeFace (// font family base)
+
+//headings font sizes
+
+$h1-font-size: 4.75rem;
+$h2-font-size: 2.5rem;
+$h3-font-size: 1.25rem;
+$h4-font-size: 1.4375rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1rem;
+
+//all of the above but for mobile
+
+//links
+
+$list-color: #242424;
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.1875,
+  2: $spacer * 0.25,
+  3: $spacer * 0.5,
+  4: $spacer * 0.625,
+  5: $spacer * 0.9375,
+  6: $spacer,
+  7: $spacer * 1.25,
+  8: $spacer * 1.5,
+  9: $spacer * 1.875,
+  10: $spacer * 2.5,
+  11: $spacer * 3,
+  12: $spacer * 3.125,
+  13: $spacer * 6.25,
+  14: $spacer * 9.38,
+  15: $spacer * 7,
+  16: $spacer * 14,
+  17: $spacer * 16,
+  18: $spacer * 0.75,
+  19: $spacer * 5,
+) !default;
+
+$enable-negative-margins: true;
+
+
+
+$display-font-sizes: (
+  1: 3.75rem,
+  2: 3rem,
+  3: 2.375rem,
+  4: 1.875rem,
+  5: 1.5rem,
+  6: 1rem
+) !default;

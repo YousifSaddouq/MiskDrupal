@@ -1,0 +1,21 @@
+@mixin hero-bg($image, $height, $width, $height-mob, $width-mob){
+  background-image: url($image);
+  background-repeat: no-repeat;
+  
+  @if $height != null {
+    min-height: $height;
+  }
+  @if $width != null {
+    min-width: $width;
+  }
+  @media(max-width:768px)
+  {
+        @if $height-mob != null {
+              min-height: $height-mob;
+    }
+        @if $width-mob != null {
+              min-width: $width-mob;
+    }
+  }
+ 
+}
