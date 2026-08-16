@@ -1,0 +1,29 @@
+{% if items %}
+
+  <div class="d-flex align-items-center gap-6">
+
+    {% for item in items %}
+
+      {% set icon = {
+        'facebook': 'bi-facebook',
+        'instagram': 'bi-instagram',
+        'linkedin': 'bi-linkedin',
+        'twitter': 'bi-twitter-x'
+      }[item.title] ?? '' %}
+
+      {% if icon %}
+        <a
+          href="{{ item.url }}"
+          target="_blank"
+          aria-label="{{ item.title }}"
+          class="text-dark text-decoration-none"
+        >
+          <i class="bi {{ icon }} fs-4"></i>
+        </a>
+      {% endif %}
+
+    {% endfor %}
+
+  </div>
+
+{% endif %}

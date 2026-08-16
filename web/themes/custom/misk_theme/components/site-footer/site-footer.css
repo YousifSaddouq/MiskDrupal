@@ -1,0 +1,72 @@
+.site-footer {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+}
+
+.footer-content .footer-links {
+  padding-left: 0.75rem;
+}
+.footer-content .footer-links .footer-nav a {
+  transition: transform 0.2s ease;
+}
+.footer-content .footer-links .footer-nav a:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 4px;
+  display: inline-block;
+  transform: scale(1.02);
+}
+
+@media (min-width: 992px) {
+  .footer-content .footer-links {
+    padding-left: calc((100vw - 960px) / 2 + 0.75rem);
+  }
+}
+@media (min-width: 1200px) {
+  .footer-content .footer-links {
+    padding-left: calc((100vw - 1140px) / 2 + 0.75rem);
+  }
+}
+@media (min-width: 1400px) {
+  .footer-content .footer-links {
+    padding-left: calc((100vw - 1320px) / 2 + 0.75rem);
+  }
+}
+@media (max-width: 767.98px) {
+  .footer-content .footer-links {
+    padding-left: 1.88rem;
+  }
+}
+.footer-logos img {
+  max-width: 14rem;
+  max-height: 4.375rem;
+  object-fit: contain;
+}
+
+/* 1. Keep your original code clean and untouched for anonymous users */
+.footer-media {
+  position: relative;
+  overflow: hidden;
+}
+.footer-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 2. Isolated fix that triggers ONLY when you are logged in as admin */
+body.user-logged-in .footer-media .contextual-region {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+body.user-logged-in .footer-media .contextual-links-wrapper {
+  z-index: 10;
+}
+
+/*# sourceMappingURL=site-footer.css.map */

@@ -144,19 +144,33 @@
 {% endblock %}
 
 {% block footer %}
-        <div class="{{ container }}">
-          {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-            <div class="site-footer__top clearfix">
-              {{ page.footer_first }}
-              {{ page.footer_second }}
-              {{ page.footer_third }}
-              {{ page.footer_fourth }}
-            </div>
-          {% endif %}
-          {% if page.footer_fifth %}
-            <div class="site-footer__bottom">
-              {{ page.footer_fifth }}
-            </div>
-          {% endif %}
-        </div>
+
+  {% embed 'misk_theme:site-footer' %}
+
+    {% block footer_menu %}
+      {{ page.footer_menu }}
+    {% endblock %}
+
+    {% block footer_certificate %}
+      {{ page.footer_certificate }}
+    {% endblock %}
+
+    {% block footer_media %}
+      {{ page.footer_media }}
+    {% endblock %}
+
+    {% block footer_social %}
+      {{ page.footer_social }}
+    {% endblock %}
+
+    {% block footer_legal %}
+      {{ page.footer_legal }}
+    {% endblock %}
+
+    {% block footer_copyright %}
+      {{ page.footer_copyright }}
+    {% endblock %}
+
+  {% endembed %}
+
 {% endblock %}

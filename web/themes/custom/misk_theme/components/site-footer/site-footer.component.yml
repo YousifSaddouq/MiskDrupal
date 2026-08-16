@@ -1,0 +1,20 @@
+name: Site Footer
+
+slots:
+  footer_menu:
+    title: Footer Menu
+
+  footer_certificate:
+    title: Footer Certificate
+
+  footer_media:
+    title: Footer Media
+
+  footer_social:
+    title: Footer Social
+
+  footer_legal:
+    title: Footer Legal
+
+  footer_copyright:
+    title: Footer Copyright

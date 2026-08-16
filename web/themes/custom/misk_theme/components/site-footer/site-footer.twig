@@ -1,0 +1,48 @@
+<div class="footer-content row g-0">
+
+  <div class="footer-links bg-primary col-12 col-md-7 py-9 py-md-12 pe-9 pe-md-18">
+    <div class="container">
+
+      {% block footer_menu %}{% endblock %}
+
+      <div class="footer-logos d-flex align-items-center">
+        {% block footer_certificate %}{% endblock %}
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="footer-media col-12 col-md-5 d-none d-md-block">
+    {% block footer_media %}{% endblock %}
+  </div>
+
+</div>
+
+
+<div class="footer-end bg-primary-yellow pt-9 pb-0 pb-md-9">
+
+  <div class="container d-flex flex-column flex-md-row justify-content-md-between align-items-center gap-6">
+
+    <div class="footer-social mb-7 mb-md-0">
+      <div class="d-flex align-items-center gap-6">
+        {% block footer_social %}{% endblock %}
+      </div>
+    </div>
+
+
+    <div class="footer-legal d-flex flex-column flex-md-row align-items-center gap-4 fw-light">
+
+      <div class="legal-privacy d-flex gap-4 mb-5 mb-md-0">
+        {% block footer_legal %}{% endblock %}
+      </div>
+
+      <div class="legal-copyright mb-9 mb-md-0">
+        {% block footer_copyright %}{% endblock %}
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

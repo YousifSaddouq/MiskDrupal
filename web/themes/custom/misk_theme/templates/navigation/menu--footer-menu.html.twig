@@ -1,0 +1,43 @@
+{% if items %}
+
+  {% set split = ((items|length) / 2)|round(0, 'ceil') %}
+
+  <div class="footer-nav row mb-3">
+
+    <div class="col-6">
+      <ul class="list-unstyled mb-0">
+
+        {% for item in items|slice(0, split) %}
+          <li class="mb-4">
+            <a
+              href="{{ item.url }}"
+              class="text-white display-6 fw-bold text-decoration-none"
+            >
+              {{ item.title }}
+            </a>
+          </li>
+        {% endfor %}
+
+      </ul>
+    </div>
+
+    <div class="col-6">
+      <ul class="list-unstyled mb-0">
+
+        {% for item in items|slice(split) %}
+          <li class="mb-4">
+            <a
+              href="{{ item.url }}"
+              class="text-white display-6 fw-bold text-decoration-none"
+            >
+              {{ item.title }}
+            </a>
+          </li>
+        {% endfor %}
+
+      </ul>
+    </div>
+
+  </div>
+
+{% endif %}

@@ -1,5 +1,5 @@
 name: misk-drupal
-type: drupal
+type: drupal11
 docroot: web
 php_version: "8.3"
 webserver_type: nginx-fpm
@@ -11,7 +11,8 @@ database:
     version: "11.8"
 use_dns_when_possible: true
 composer_version: "2"
-web_environment: []
+web_environment:
+    - PHP_OPTIONS=-d memory_limit=1024M -d max_execution_time=300
 corepack_enable: true
 
 # Key features of DDEV's config.yaml:
