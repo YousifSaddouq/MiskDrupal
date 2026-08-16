@@ -9,11 +9,14 @@
     <div class="partners-content mx-auto d-flex flex-wrap justify-content-center align-items-center mb-0 mb-md-9">
         {% block partners %} {% endblock %}
     </div>
-   {% if button_text %}
-    <div class="partners-more text-center">
-        <button class="btn btn-primary rounded-pill px-7 py-3 fw-bold">
-            {{ button_text }}
-        </button>
-    </div>
-    {% endif %}
+  {% if button_text %}
+  <div class="partners-more text-center">
+    <a
+      href="/partners"
+      class="btn btn-primary rounded-pill px-7 py-3 fw-bold"
+    >
+      {{ button_text }}
+    </a>
+  </div>
+{% endif %}
 </div>

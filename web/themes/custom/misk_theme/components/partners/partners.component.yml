@@ -8,6 +8,7 @@ props:
     button_text:
       type: string
       title: Button Text
+  
 slots:
   partners:
     title: Partners    

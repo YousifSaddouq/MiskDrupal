@@ -1,8 +1,24 @@
-<div class="partner-cell d-flex justify-content-center align-items-center mb-10 mb-md-0">
-                <a href="{{ url|default('#') }}" class="d-flex justify-content-center align-items-center w-100 h-100" target="_blank">
-                     {% if image %}
-                        <img class="img-fluid" src="{{ file_url(image)}}">
-                     {% endif %}   
-                    
-                </a>
+<div class="partner-cell col-6 col-md-3 d-flex justify-content-center align-items-center">
+
+  <a
+    href="{{ url|default('#') }}"
+    class="d-flex justify-content-center align-items-center w-100 h-100"
+    target="_blank"
+    rel="noopener"
+    aria-label="{{ title|default('Partner') }}"
+  >
+
+    {% if image %}
+      <img
+        class="img-fluid"
+        src="{{ file_url(image) }}"
+        alt="{{ title|default('') }}"
+      >
+    {% endif %}
+
+  </a>
+
+
+
+
 </div>

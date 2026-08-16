@@ -1,0 +1,15 @@
+{% set media = node.field_partner_media.entity %}
+{% set partner_url = node.field_partner_url.0.uri|default('') %}
+{% set partner_title = node.field_partner_title.value|default('') %}
+
+{% if media and media.field_media_image.entity %}
+
+  {% set image = media.field_media_image.entity.uri.value %}
+
+  {% include 'misk_theme:partner' with {
+    image: image,
+    url: partner_url,
+    title: partner_title,
+  } only %}
+
+{% endif %}
