@@ -1,0 +1,16 @@
+name: News Card
+probs:
+  type: object
+  properties:
+    image:
+      title: Image
+      $ref: "json-schema-definitions://canvas.module/stream-wrapper-image-uri"
+    title:
+      type: string
+      title: Title 
+    date:
+      type: string
+      title: Date 
+    url:
+      type: string
+      title: URL      
