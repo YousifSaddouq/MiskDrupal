@@ -1,5 +1,28 @@
-{{ dump(node.field_news_image.entity|keys) }}
 
-{#
-{% set media = node.field_news_media. %}
- #}
+
+
+
+
+{% set media = node.field_news_media.entity %}
+{% set news_title = node.field_news_title.value %}
+{% set news_date = node.field_news_date.value|date('F j, Y') %}
+{% set news_url = path('entity.node.canonical', {'node': node.id()}) %}
+ 
+{% if media and  media.field_media_image.entity %}
+  {% set image = media.field_media_image.entity.uri.value %}
+
+  {% include 'misk_theme:news-card' with {
+    image: image,
+    title: news_title,
+    date: news_date,
+    url: news_url
+  } only %}
+
+{% else %}
+
+  {% include 'misk_theme:news-card' with {
+    title: news_title,
+    date: news_date,
+    url: news_url
+  } only %}
+{% endif %}

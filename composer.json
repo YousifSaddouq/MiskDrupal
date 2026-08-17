@@ -31,8 +31,11 @@
         "drupal/drupal_cms_google_analytics": "^2",
         "drupal/drupal_cms_seo_tools": "^2",
         "drupal/drupal_cms_starter": "^2",
+        "drupal/entityqueue": "^1.12",
         "drupal/paragraphs": "^1.23",
         "drupal/recipe_installer_kit": "^1.0.4",
+        "drupal/slick": "^3.0",
+        "drupal/slick_views": "^3.0",
         "drupal/webform": "@beta"
     },
     "require-dev": {
