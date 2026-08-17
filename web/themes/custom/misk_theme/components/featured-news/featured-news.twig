@@ -1,0 +1,40 @@
+<section class="news py-5">
+
+  {% if heading %}
+    <h2 class="text-center mb-5">
+      {{ heading }}
+    </h2>
+  {% endif %}
+
+  <div class="news-slider">
+    {% block news %}
+    {% endblock %}
+  </div>
+
+  <div class="news-nav d-flex justify-content-center align-items-center gap-3 mt-5">
+    <button
+      type="button"
+      class="news-prev"
+      aria-label="Previous news"
+    >
+      <i class="bi bi-arrow-left"></i>
+    </button>
+
+    <button
+      type="button"
+      class="news-next"
+      aria-label="Next news"
+    >
+      <i class="bi bi-arrow-right"></i>
+    </button>
+  </div>
+
+  {% if button_text and button_url %}
+    <div class="featured-news-cta text-center mt-4">
+      <a href="{{ button_url }}" class="featured-news-button">
+        {{ button_text }}
+      </a>
+    </div>
+  {% endif %}
+
+</section>

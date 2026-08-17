@@ -1,0 +1,24 @@
+name: News Article
+
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+
+    date:
+      type: string
+      title: Date
+
+    image:
+      type: string
+      title: Image
+
+    body:
+      type: string
+      title: Body
+
+    updated:
+      type: string
+      title: Last Updated

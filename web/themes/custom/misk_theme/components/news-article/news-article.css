@@ -1,0 +1,47 @@
+.admissions-hero {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+.admissions-hero:has(+ .admissions-image-section) {
+  padding-bottom: 14rem;
+}
+@media (max-width: 767.98px) {
+  .admissions-hero .admissions-title {
+    font-size: 1.25rem;
+  }
+}
+
+.footer-admissions {
+  max-width: 55%;
+}
+.footer-admissions::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 100vw;
+  background-color: inherit;
+}
+@media (max-width: 767.98px) {
+  .footer-admissions {
+    max-width: 100%;
+  }
+}
+
+.admissions-image-section .admissions-main-image {
+  width: 80%;
+  max-height: 55vh;
+}
+@media (max-width: 767.98px) {
+  .admissions-image-section .admissions-main-image {
+    width: 100%;
+    max-height: 40vh;
+  }
+}
+
+.news-node-article-body .dateline h3 {
+  font-size: 1.6875rem;
+}
+
+/*# sourceMappingURL=news-article.css.map */

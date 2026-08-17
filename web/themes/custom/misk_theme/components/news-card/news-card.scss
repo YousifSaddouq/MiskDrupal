@@ -1,5 +1,6 @@
 @import "../../scss/variables";
 @import "../../scss/mixins";
+
 .news-card {
   a {
     transition: transform 0.3s ease;
@@ -21,20 +22,26 @@
   }
 
   &-media {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+
     img {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+      display: block;
       transition: transform 0.7s ease;
     }
 
     &::after {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       background: $primary;
       opacity: 0;
       transition: opacity 0.4s ease;
+      pointer-events: none;
     }
 
     &:hover {
@@ -48,9 +55,11 @@
     }
 
     .news-date {
+      position: absolute;
       bottom: 30px;
       left: 20px;
       font-size: 0.875rem;
+      z-index: 2;
     }
   }
 

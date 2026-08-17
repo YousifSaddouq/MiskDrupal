@@ -1,0 +1,60 @@
+.news {
+  overflow: hidden;
+}
+.news .slick-slide .news-card-media img {
+  height: 330px;
+}
+.news .slick-slide.slick-center .news-card-media img {
+  height: 500px;
+}
+.news .news-nav .news-prev,
+.news .news-nav .news-next {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #00372a;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.news .news-nav .news-prev:hover, .news .news-nav .news-prev:focus,
+.news .news-nav .news-next:hover,
+.news .news-nav .news-next:focus {
+  background: #c2d500;
+  color: #00372a;
+  transform: scale(1.05);
+}
+.news .news-nav .news-prev i,
+.news .news-nav .news-next i {
+  line-height: 1;
+  transform: none;
+}
+.news .featured-news-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border: 0;
+  border-radius: 50rem;
+  background: #00372a;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.news .featured-news-button:hover, .news .featured-news-button:focus {
+  background: #c2d500;
+  color: #00372a;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=featured-news.css.map */

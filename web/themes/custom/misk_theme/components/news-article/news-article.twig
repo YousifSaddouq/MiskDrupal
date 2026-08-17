@@ -1,0 +1,56 @@
+<section class="admissions-hero bg-light pt-15">
+
+  <div class="container admissions-title-container pt-10 pt-md-13 pb-11">
+    <h1 class="admissions-title">{{ title }}</h1>
+  </div>
+
+  {% if date %}
+    <div class="container">
+      <div class="footer-admissions bg-primary-yellow position-relative d-flex justify-content-between align-items-center py-5 pe-7">
+
+        <span class="m-0">{{ date }}</span>
+
+        <div class="d-flex align-items-center gap-6">
+          {# Social links will go here. #}
+        </div>
+
+      </div>
+    </div>
+  {% endif %}
+
+</section>
+
+{% if image %}
+  <section class="admissions-image-section mb-12 mb-md-13 mt-n16 mt-md-n17">
+    <div class="container">
+      <img
+        src="{{ file_url(image) }}"
+        alt="{{ title }}"
+        class="admissions-main-image d-block object-fit-cover rounded-3"
+      >
+    </div>
+  </section>
+{% endif %}
+
+<div class="news-node-article-body container mb-12 mb-md-13">
+  <div class="row">
+    <div class="col-10">
+      <div class="press-release-paragraph">
+        {{ body|raw }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="last-updated container mb-12 mb-md-13">
+  <div class="row">
+    <div class="col-10">
+      <div class="last-updated">
+        <hr class="opacity-75">
+        <p class="display-6">
+          Last Updated: {{ updated }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
