@@ -22,3 +22,6 @@ props:
     updated:
       type: string
       title: Last Updated
+slots:
+  social_share:
+    title: Social Share      

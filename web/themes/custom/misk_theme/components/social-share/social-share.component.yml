@@ -1,0 +1,16 @@
+name: Social Share
+
+props:
+  type: object
+  properties:
+    url:
+      type: string
+      title: Share URL
+
+    title:
+      type: string
+      title: Share Title
+
+libraryOverrides:
+  dependencies:
+    - addtoany/addtoany.front

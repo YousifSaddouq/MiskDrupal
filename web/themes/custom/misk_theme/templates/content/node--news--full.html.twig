@@ -1,25 +1,69 @@
 {% set media = node.field_news_media.entity %}
 
-{% set news_title = node.field_news_title.value|striptags %}
+{% set news_title = node.label|striptags %}
+
 {% set news_date = node.field_news_date.value|date('d F Y') %}
+
 {% set news_body = node.field_news_body.0.processed|default('') %}
+
 {% set news_updated = node.changed.value|date('j/n/Y') %}
 
+{% set news_url = url(
+  'entity.node.canonical',
+  {'node': node.id()},
+  {'absolute': true}
+) %}
+
+
 {% if media and media.field_media_image.entity %}
+
   {% set image = media.field_media_image.entity.uri.value %}
 
-  {% include 'misk_theme:news-article' with {
+  {% embed 'misk_theme:news-article' with {
     title: news_title,
     date: news_date,
     image: image,
     body: news_body,
     updated: news_updated
-  } only %}
+  } %}
+
+    {% block social_share %}
+      {% include 'misk_theme:social-share' with {
+        url: news_url,
+        title: news_title
+      } only %}
+    {% endblock %}
+
+  {% endembed %}
+
 {% else %}
-  {% include 'misk_theme:news-article' with {
+
+  {% embed 'misk_theme:news-article' with {
     title: news_title,
     date: news_date,
     body: news_body,
     updated: news_updated
-  } only %}
+  } %}
+
+    {% block social_share %}
+      {% include 'misk_theme:social-share' with {
+        url: news_url,
+        title: news_title
+      } only %}
+    {% endblock %}
+
+  {% endembed %}
+
 {% endif %}
+
+{% embed 'misk_theme:featured-news' with {
+  heading: 'Featured News',
+  button_text: 'See All News',
+  button_url: '/news',
+} %}
+
+{% block news %}
+  {{ drupal_view('news', 'block_1') }}
+{% endblock %}
+
+{% endembed %}

@@ -1,0 +1,32 @@
+.social-share {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.social-share .social-share__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #000;
+  background: transparent;
+  text-decoration: none;
+  line-height: 1;
+  cursor: pointer;
+}
+.social-share .social-share__button i {
+  font-size: 24px;
+  line-height: 1;
+  color: #000;
+}
+.social-share .a2a_svg {
+  display: none !important;
+}
+.social-share .a2a_label {
+  display: none !important;
+}
+
+/*# sourceMappingURL=social-share.css.map */

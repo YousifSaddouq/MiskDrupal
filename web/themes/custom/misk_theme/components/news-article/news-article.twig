@@ -9,11 +9,9 @@
       <div class="footer-admissions bg-primary-yellow position-relative d-flex justify-content-between align-items-center py-5 pe-7">
 
         <span class="m-0">{{ date }}</span>
-
         <div class="d-flex align-items-center gap-6">
-          {# Social links will go here. #}
-        </div>
-
+          {% block social_share %}{% endblock %}
+       </div>
       </div>
     </div>
   {% endif %}
