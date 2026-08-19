@@ -1,0 +1,48 @@
+<section class="media-header pt-15">
+
+  <div class="container media-header-title-container pt-10 pt-md-13 pb-11">
+
+    {% if title %}
+      <h1 class="media-header-title">
+        {{ title }}
+      </h1>
+    {% endif %}
+
+  </div>
+
+  <div class="container">
+
+    <div class="media-header-bar bg-primary-yellow position-relative d-flex justify-content-between align-items-center py-5 pe-7">
+
+      {% if date %}
+        <span class="m-0">
+          {{ date }}
+        </span>
+      {% endif %}
+
+      <div class="media-header-social">
+        {% include 'misk_theme:social-share' with {
+          title: title|default(''),
+          url: ''
+        } only %}
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+{% if image %}
+
+  <section class="media-header-image-section mb-12 mb-md-13 mt-n16 mt-md-n17">
+
+    <div class="container">
+
+      <img src="{{ file_url(image) }}" alt="{{ title|default('') }}" class="media-header-image d-block object-fit-cover rounded-3">
+
+    </div>
+
+  </section>
+
+{% endif %}

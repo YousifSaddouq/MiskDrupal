@@ -20391,4 +20391,19 @@ img {
   z-index: 10;
 }
 
+.hero-logo {
+  display: none;
+}
+
+.inner-page-logo {
+  display: block;
+}
+
+body.path-frontpage .hero-logo {
+  display: block;
+}
+body.path-frontpage .inner-page-logo {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

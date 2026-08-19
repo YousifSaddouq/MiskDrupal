@@ -1,0 +1,17 @@
+name: Media Header
+props:
+  type: object
+  properties:
+
+    title:
+      type: string
+      title: Title
+    
+
+    date:
+      type: string
+      title: Date
+
+    image:
+      title: Image
+      $ref: json-schema-definitions://canvas.module/stream-wrapper-image-uri

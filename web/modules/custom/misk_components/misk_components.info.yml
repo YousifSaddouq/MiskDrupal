@@ -1,0 +1,5 @@
+name: Misk Components
+type: module
+description: Misk Canvas components.
+package: custom
+core_version_requirement: ^11

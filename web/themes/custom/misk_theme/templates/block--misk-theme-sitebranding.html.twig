@@ -1,5 +1,15 @@
-{% if site_logo %}
-<a href="{{ path('<front>') }}">
-  <img src="{{ site_logo }}" class="hero-logo me-14 me-md-19 position-relative">
+<a href="{{ path('<front>') }}" rel="home">
+
+  {% if site_logo %}
+    <img
+      src="{{ site_logo }}"
+      class="hero-logo homepage-logo me-14 me-md-19 position-relative"
+    >
+  {% endif %}
+
+  <img
+    src="{{ base_path ~ directory }}/assets/Images/admissions-logo.svg"
+    class="hero-logo inner-page-logo me-14 me-md-19 position-relative"
+  >
+
 </a>
-{% endif %}
