@@ -1,0 +1,15 @@
+<div class="application container mb-12 mb-md-13">
+  <div class="row">
+
+    <div class="application-header col-12 col-md-3 d-flex align-items-start pt-3">
+      {% if heading %}
+        <h2 class="fw-bold">{{ heading }}</h2>
+      {% endif %}
+    </div>
+
+    <div class="application-form col-12 col-md-8">
+      {% block form %}{% endblock %}
+    </div>
+
+  </div>
+</div>

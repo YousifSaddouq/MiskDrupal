@@ -1,0 +1,10 @@
+name: Application Form
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Heading
+slots:
+  form:
+    title: Form      

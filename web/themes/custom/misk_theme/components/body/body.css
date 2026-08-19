@@ -1,0 +1,40 @@
+.rich-text table.table.table-striped.fees-table {
+  width: 100%;
+  margin-bottom: 3.125rem;
+  --bs-table-striped-bg: #dbeae6;
+}
+.rich-text table.table.table-striped.fees-table > :not(caption) > * > * {
+  border-bottom-width: 0;
+}
+.rich-text table.table.table-striped.fees-table thead {
+  background-color: #e4ecea;
+}
+.rich-text table.table.table-striped.fees-table thead tr {
+  border-bottom: 1px solid #d9e378;
+}
+.rich-text table.table.table-striped.fees-table thead th {
+  font-weight: 600;
+  background-color: #e4ecea;
+}
+.rich-text table.table.table-striped.fees-table tbody tr {
+  border-bottom: 1px solid var(--bs-border-color);
+}
+.rich-text table.table.table-striped.fees-table th,
+.rich-text table.table.table-striped.fees-table td {
+  transition: transform 0.3s ease;
+}
+.rich-text table.table.table-striped.fees-table th:hover,
+.rich-text table.table.table-striped.fees-table td:hover {
+  transform: scale(1.02);
+}
+.rich-text ul.two-column-list {
+  column-count: 2;
+  column-gap: 3rem;
+  padding-left: 1.25rem;
+}
+.rich-text ul.two-column-list li {
+  break-inside: avoid;
+  margin-bottom: 0.5rem;
+}
+
+/*# sourceMappingURL=body.css.map */

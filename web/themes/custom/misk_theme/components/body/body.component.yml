@@ -1,0 +1,8 @@
+name: Body
+props:
+  type: object
+  properties:
+    content:
+      type: string
+      title: Content 
+      contentMediaType: text/html

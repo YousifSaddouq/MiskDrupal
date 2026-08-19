@@ -1,0 +1,57 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.rich-text {
+
+  table.table.table-striped.fees-table {
+    width: 100%;
+    margin-bottom: map-get($spacers, 12);
+
+    --bs-table-striped-bg: #{$light-hover};
+
+    > :not(caption) > * > * {
+      border-bottom-width: 0;
+    }
+
+    thead {
+      background-color: $light;
+
+      tr {
+        border-bottom: 1px solid $secondary;
+      }
+
+      th {
+        font-weight: 600;
+        background-color: $light;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid var(--bs-border-color);
+      }
+    }
+
+    th,
+    td {
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  ul.two-column-list {
+    column-count: 2;
+    column-gap: 3rem;
+    padding-left: 1.25rem;
+
+    li {
+      break-inside: avoid;
+      margin-bottom: 0.5rem;
+    }
+
+   
+  }
+}
