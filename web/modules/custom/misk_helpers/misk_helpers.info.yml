@@ -1,0 +1,5 @@
+name: Misk Helpers
+type: module
+description: Helpers For Misk
+package: custom
+core_version_requirement: ^11

@@ -1,0 +1,8 @@
+services:
+  misk_helpers.twig_extension:
+    class: Drupal\misk_helpers\Twig\MiskTwigExtension
+    arguments:
+      - '@current_route_match'
+      - '@date.formatter'
+    tags:
+      - { name: twig.extension }

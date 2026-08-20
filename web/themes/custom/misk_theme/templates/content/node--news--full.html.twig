@@ -2,7 +2,7 @@
 
 {% set news_title = node.label|striptags %}
 
-{% set news_date = node.field_news_date.value|date('d F Y') %}
+{% set news_date = node.created.value|date('d F Y') %}
 
 {% set news_body = node.field_news_body.0.processed|default('') %}
 
