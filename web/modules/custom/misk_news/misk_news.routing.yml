@@ -1,0 +1,15 @@
+misk_news.news_page:
+  path: '/custom-news'
+  defaults:
+    _controller: '\Drupal\misk_news\Controller\NewsController::page'
+    _title: 'All News'
+  requirements:
+    _permission: 'access content'
+
+misk_news.settings:
+  path: '/admin/config/misk/news'
+  defaults:
+    _form: \Drupal\misk_news\Form\NewsSettingsForm
+    _title: 'Misk News Settings'
+  requirements:
+    _permission: 'administer site configuration'  

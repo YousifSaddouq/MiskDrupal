@@ -1,0 +1,10 @@
+misk_news.settings:
+  type: config_object
+  label: 'Misk News Settings'
+  mapping:
+    items_per_page:
+      type: integer
+      label: 'Items Per Page'
+    sort_order:
+      type: string
+      label: 'Sort Order'  

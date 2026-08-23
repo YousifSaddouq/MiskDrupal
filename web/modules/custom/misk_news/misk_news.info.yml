@@ -1,0 +1,7 @@
+name: Misk News
+type: module
+description: 'Provides a custom News listing page for the Misk website.'
+package: Custom
+core_version_requirement: ^11
+dependencies:
+  - drupal:node
