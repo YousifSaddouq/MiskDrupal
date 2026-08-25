@@ -1,0 +1,5 @@
+name: Misk Contact
+type: module
+description: 'Provides a custom contact form and contact submissions page.'
+package: Custom
+core_version_requirement: ^11

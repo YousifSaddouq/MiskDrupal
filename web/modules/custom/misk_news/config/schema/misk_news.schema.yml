@@ -2,6 +2,18 @@ misk_news.settings:
   type: config_object
   label: 'Misk News Settings'
   mapping:
+
+    page_title:
+      type: string
+      label: 'Page Title'
+      
+    header_image:
+      type: sequence
+      label: 'Header Image' 
+      sequence:
+        type: integer
+        label: 'File Id'
+
     items_per_page:
       type: integer
       label: 'Items Per Page'

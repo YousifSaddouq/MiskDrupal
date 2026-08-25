@@ -1,0 +1,49 @@
+<?php
+
+function misk_contact_schema(): array {
+    $schema['misk_contact_submission'] = [
+        'fields' => [
+            'id' => [
+                'type' => 'serial',
+                'unsigned' => TRUE,
+                'not null' =>TRUE,
+            ],
+
+            'full_name' => [
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+            ],
+
+            'email' => [
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+            ],
+
+            'age' => [
+                'type' => 'int',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ],
+
+            'message' => [
+                'type' => 'text',
+                'not null' => FALSE,
+
+            ],
+
+            'created' => [
+                'type' => 'int',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ],
+        ],
+
+       'primary key' => [
+          'id',
+       ],
+    ];
+
+    return $schema;
+}

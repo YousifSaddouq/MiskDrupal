@@ -1,0 +1,15 @@
+misk_contact.form:
+  path: '/contact-us'
+  defaults:
+    _form: '\Drupal\misk_contact\Form\ContactForm'
+    _title: 'Apply Now'
+  requirements:
+    _permission: 'access content'  
+
+misk_contact.results:
+  path: '/admin/contact-submissions'
+  defaults:
+    _controller: '\Drupal\misk_contact\Controller\ContactResultsController::page'
+    _title: 'Contact Submissions'
+  requirements:
+    _permission: 'administer site configuration'    

@@ -4,6 +4,7 @@ namespace Drupal\misk_news\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
 use Override;
 
 final class NewsSettingsForm extends ConfigFormBase
@@ -27,6 +28,25 @@ final class NewsSettingsForm extends ConfigFormBase
     {
         $config = $this->config('misk_news.settings');
 
+        $form['page_title'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Select a title for the page'),
+            '#default_value' => $config->get('page_title') ?? 'All News',
+            '#required' => TRUE,
+        ];
+
+        $form['header_image'] = [
+            '#type' => 'managed_file',
+            '#title' => $this->t('Select an image for the page'),
+            '#default_value' => $config->get('header_image') ?? [],
+            '#upload_location' => 'public://misk_news/',
+            '#upload_validators' => [
+                'FileExtension' => [
+                    'extensions' => 'png jpg jpeg webp',
+                ],
+            ]
+        ];
+
         $form['items_per_page'] = [
             '#type' => 'number',
             '#title' => $this->t('Select Items Per Page'),
@@ -38,7 +58,7 @@ final class NewsSettingsForm extends ConfigFormBase
 
         $form['sort_order'] = [
             '#type' => 'select',
-            '#title' => 'Select ASC or DESC',
+            '#title' => $this->t('Select ASC or DESC'),
             '#options' => [
                 'ASC' => 'Oldest First',
                 'DESC' => 'Newest First',
@@ -55,7 +75,18 @@ final class NewsSettingsForm extends ConfigFormBase
     {
         $config = $this->config('misk_news.settings');
 
-        $config->set('items_per_page', $form_state->getValue('items_per_page'))
+        $image = $form_state->getValue('header_image');
+        if(!empty($image[0])) {
+            $file = File::load($image[0]);
+            if($file) {
+                $file->setPermanent();
+                $file->save();
+            }
+        }
+
+        $config->set('page_title',$form_state->getValue('page_title'))
+               ->set('header_image',$image)
+               ->set('items_per_page', $form_state->getValue('items_per_page'))
                ->set('sort_order', $form_state->getValue('sort_order'))
                ->save();
       

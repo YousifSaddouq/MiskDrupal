@@ -10,3 +10,7 @@ props:
     image:
       title: Image
       $ref: json-schema-definitions://canvas.module/stream-wrapper-image-uri
+
+    date:
+      type: string
+      title: Date  
