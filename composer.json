@@ -39,6 +39,7 @@
         "drupal/slick": "^3.0",
         "drupal/slick_views": "^3.0",
         "drupal/twig_tweak": "^3.4",
+        "drupal/ui_patterns": "^2.0",
         "drupal/views_bootstrap": "^5.5",
         "drupal/webform": "^6.3"
     },

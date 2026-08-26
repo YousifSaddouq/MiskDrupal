@@ -1,11 +1,3 @@
-misk_contact.form:
-  path: '/contact-us'
-  defaults:
-    _form: '\Drupal\misk_contact\Form\ContactForm'
-    _title: 'Apply Now'
-  requirements:
-    _permission: 'access content'  
-
 misk_contact.results:
   path: '/admin/contact-submissions'
   defaults:

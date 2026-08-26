@@ -56,6 +56,18 @@ final class NewsSettingsForm extends ConfigFormBase
 
         ];
 
+         $form['sort_criteria'] = [
+            '#type' => 'select',
+            '#title' => $this->t('Sort Criteria'),
+            '#options' => [
+                'created' => $this->t('Created Date'),
+                'changed' => $this->t('Last Updated Date'),
+                'title' => $this->t('Title'),
+            ],
+            '#default_value' => $config->get('sort_criteria') ?? 'created',
+           '#required' => TRUE, 
+        ];
+
         $form['sort_order'] = [
             '#type' => 'select',
             '#title' => $this->t('Select ASC or DESC'),
@@ -87,6 +99,7 @@ final class NewsSettingsForm extends ConfigFormBase
         $config->set('page_title',$form_state->getValue('page_title'))
                ->set('header_image',$image)
                ->set('items_per_page', $form_state->getValue('items_per_page'))
+               ->set('sort_criteria', $form_state->getValue('sort_criteria'))
                ->set('sort_order', $form_state->getValue('sort_order'))
                ->save();
       

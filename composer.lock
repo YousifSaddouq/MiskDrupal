@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "683f83e4eb0dd7fc38085f756e6118ed",
+    "content-hash": "e0fb645e701d5d0a18cb86fd26dbf33f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8297,6 +8297,87 @@
             "homepage": "https://www.drupal.org/project/ui_icons",
             "support": {
                 "source": "https://git.drupalcode.org/project/ui_icons"
+            }
+        },
+        {
+            "name": "drupal/ui_patterns",
+            "version": "2.0.19",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ui_patterns.git",
+                "reference": "2.0.19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ui_patterns-2.0.19.zip",
+                "reference": "2.0.19",
+                "shasum": "e49ecbf90e78c26e5635724eb2c9f71820916d3c"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "justinrainbow/json-schema": "^5.2 || ^6.3"
+            },
+            "require-dev": {
+                "drupal/ui_patterns_library": "*",
+                "drush/drush": "^12 || ^13"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.19",
+                    "datestamp": "1786034887",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ademarco",
+                    "homepage": "https://www.drupal.org/user/186696"
+                },
+                {
+                    "name": "bircher",
+                    "homepage": "https://www.drupal.org/user/1344166"
+                },
+                {
+                    "name": "christian.wiedemann",
+                    "homepage": "https://www.drupal.org/user/861002"
+                },
+                {
+                    "name": "duaelfr",
+                    "homepage": "https://www.drupal.org/user/931394"
+                },
+                {
+                    "name": "g4mbini",
+                    "homepage": "https://www.drupal.org/user/2533498"
+                },
+                {
+                    "name": "grimreaper",
+                    "homepage": "https://www.drupal.org/user/2388214"
+                },
+                {
+                    "name": "just_like_good_vibes",
+                    "homepage": "https://www.drupal.org/user/792018"
+                },
+                {
+                    "name": "pdureau",
+                    "homepage": "https://www.drupal.org/user/1903334"
+                },
+                {
+                    "name": "pescetti",
+                    "homepage": "https://www.drupal.org/user/436244"
+                }
+            ],
+            "description": "Define and expose self-contained UI components and use them seamlessly in development and site-building.",
+            "homepage": "https://www.drupal.org/project/ui_patterns",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ui_patterns"
             }
         },
         {

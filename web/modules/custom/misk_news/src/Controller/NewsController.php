@@ -37,6 +37,7 @@ public function page(): array {
     $pageTitle = $config->get('page_title') ?? 'All News';
     $headerImage = $config->get('header_image') ?? [];
     $itemsPerPage = (int) ($config->get('items_per_page') ?? 2);
+    $sortCriteria = $config->get('sort_criteria') ?? 'created';
     $sortOrder = $config->get('sort_order') ?? 'DESC';
 
     $imageUri = '';
@@ -48,14 +49,18 @@ public function page(): array {
         }
     }
 
+    $mediaHeaderProps = [
+        'title' => $pageTitle,
+        'date' => $currentDate,
+    ];
+    if(!empty($imageUri)) {
+        $mediaHeaderProps['image'] = $imageUri;
+    }
+
     $mediaHeader = [
         '#type' => 'component',
         '#component' => 'misk_theme:media-header',
-        '#props' => [
-            'title' => $pageTitle,
-            'image' => $imageUri,
-            'date' => $currentDate,
-        ],
+        '#props' => $mediaHeaderProps,
     ];
 
     
@@ -66,7 +71,7 @@ public function page(): array {
                          ->accessCheck(TRUE)
                          ->condition('type', 'news')
                          ->condition('status', 1)
-                         ->sort('created', $sortOrder)
+                         ->sort($sortCriteria, $sortOrder)
                          ->pager($itemsPerPage);
 
       $nids= $query->execute();          
@@ -99,6 +104,7 @@ public function page(): array {
             '#attributes' => [
                 'class' => [
                     'row',
+                    empty($imageUri) ? 'mt-19' : '',
                 ],
             ],
             'news' => $news,

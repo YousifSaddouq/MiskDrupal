@@ -17,6 +17,10 @@ misk_news.settings:
     items_per_page:
       type: integer
       label: 'Items Per Page'
+
+    sort_criteria:
+      type: string
+      label: 'Sort Criteria'  
     sort_order:
       type: string
       label: 'Sort Order'  
