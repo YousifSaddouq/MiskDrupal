@@ -27,6 +27,7 @@ public static function create(ContainerInterface $container): static {
 }
 
 public function page(): array {
+    
     $config = $this->configFactoryObject->get('misk_news.settings');
     $currentDate = $this->dateFormatter->format(
         $this->time->getCurrentTime(),

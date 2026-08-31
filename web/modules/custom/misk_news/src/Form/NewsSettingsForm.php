@@ -72,8 +72,8 @@ final class NewsSettingsForm extends ConfigFormBase
             '#type' => 'select',
             '#title' => $this->t('Select ASC or DESC'),
             '#options' => [
-                'ASC' => 'Oldest First',
-                'DESC' => 'Newest First',
+                'ASC' => 'Ascending',
+                'DESC' => 'Descending',
             ],
             '#default_value' => $config->get('sort_order') ?? 'DESC',
             '#required' => TRUE,
